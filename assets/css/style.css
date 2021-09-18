@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    width: 500px;
+    height: 600px;
+    box-shadow: 30px 30px 60px gray;
+    border: 1px solid rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo__header {
+    font-size: 100px;
+    font-family: system-ui;
+    color: #D7C5EB;
+}
+
+.todo__input {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 0 0 10px 0 rgb(190, 190, 190);
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.todo__input:focus {
+    border: 1px solid #D7C5EB;
+    outline: none;
+    box-shadow: 0 0 10px 0 #D7C5EB;
+}
+
+.todo__items {
+    width: 300px;
+    height: 125px;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    overflow: auto;
+}
+
+.todo__items::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+.todo__items ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+.todo__items::-webkit-scrollbar-thumb {
+    background: #D7C5EB;
+    ;
+}
+
+
+/* Handle on hover */
+
+.todo__items::-webkit-scrollbar-thumb:hover {
+    background: #c49ef0;
+    ;
+}
+
+.todo__items li {
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.todo__items li:hover {
+    cursor: pointer;
+}
+
+.todo_comment {
+    color: #D7C5EB;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .todo {
+        width: 100%;
+        height: 100%;
+    }
+    .todo__items {
+        height: 200px;
+    }
+}
